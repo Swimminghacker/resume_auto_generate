@@ -1,0 +1,14 @@
+footer {
+  margin: 15px 6px;
+  @include media("print") {
+    display: none;
+  }
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: teal;
+  }
+  p {
+    text-align: center;
+  }
+}
