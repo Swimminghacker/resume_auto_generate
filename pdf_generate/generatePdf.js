@@ -12,17 +12,18 @@ var deploy = function(){
       });
     console.log(`resume can be watched on :http://localhost:${port}`)
 }
-var generatePDF = async function() {
+var generatePDF = async function(user_id) {
   const url = 'http://localhost:9001';
   const browser = await puppeteer.launch({ headless: true ,args: ['--no-sandbox', '--disable-setuid-sandbox']})
   const page = await browser.newPage()
   await page.setViewport({
-    width: 1440,
-    height: 900
+    width: 1040,
+    height: 2200
   });
   await page.goto(url)
+  let fileName = './' + user_id + '.pdf';
   await page.pdf({
-    path: './swm.pdf',
+    path: fileName,
     format: 'A4',
     printBackground: true,
     displayHeaderFooter: false,
@@ -32,14 +33,13 @@ var generatePDF = async function() {
       right: 0,
       bottom: 0
     }
-  })
-  console.log('PDF生成在主目录中了')
+  });
+  await page.screenshot({path: user_id + '.png'});
+  console.log('PDF以及png生成在主目录中了')
   browser.close()
-  deleteall('./dist');
-  console.log('./dist文件已删除！')
   
-  connect.serverClose();
-  console.log('内置网页已关闭！')
+  connect.serverClose()
+  console.log('内置网页已关闭!')
   //process.exit(0)
 }
 
@@ -59,10 +59,16 @@ function deleteall(path) {
   }  
 };  
 
-var gp = function(){
+var gp = function(user_id){
     console.log('deploying ....');
     deploy();
     console.log('pdf generating ...')
-    generatePDF();
+    generatePDF(user_id);
+    deleteall('./dist')
+    console.log('./dist文件已删除！')
+    fs.unlink('info.json',function(err) {
+      if (err) throw err;
+      console.log('info.json删除成功');
+    });
 }
 module.exports = gp;

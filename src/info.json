@@ -5,55 +5,28 @@
     "PDF会自动生成，文件名可以在 generate_pdf.js 里改",
     "PDF的地址，将这个文件里pdf部分改为你的PDF文件名即可"
   ],
-  "title": "刘子健 - 前端工程师",
-  "aside": [
-    {
-      "href": "https://github.com/Lxxyx/LxxyxResume",
-      "content": "源代码"
-    },
-    {
-      "href": "./pdf/LxxyxResume.pdf",
-      "content": "PDF下载"
-    },
-    {
-      "href": "https://segmentfault.com/u/lxxyx",
-      "content": "SF"
-    },
-    {
-      "href": "https://www.zhihu.com/people/lxxyx",
-      "content": "知乎"
-    }
-  ],
+  "title": "铖 - 前端工程师",
+
   "header": {
     "title": {
-      "name": "石维民",
-      "job": "后端工程师"
+      "name": "铖",
+      "job": "程序猿硬件狗工程狮"
     },
     "contacts": {
+    	"sex": "女",
+    	"date": "1990-09-01",
+    	"city": "武汉",
       "phone": "15579185518",
-      "mail": "Lxxyxzj@gmail.com",
-      "wechat": "Greboxer",
-      "weibo": {
-        "href": "http://weibo.com/u/2239592792",
-        "name": "刘子健_且行且歌"
-      },
-      "github": {
-        "href": "https://github.com/Lxxyx",
-        "name": "Lxxyx"
-      },
-      "blog": {
-        "href": "http://www.lxxyx.win",
-        "name": "Lxxyx的前端乐园"
-      }
+      "mail": "Lxxyxzj@gmail.com"
     }
   },
   "education": {
     "time": "2014-2018",
-    "name": "南昌大学",
-    "major": "人力资源管理（本科）",
+    "name": "华科大学",
+    "major": "通信（本科）",
     "honor": [
-      "2015.3 - 2016.8 南昌大学家园工作室 — 前端开发",
-      "2016.9 - 2017.6 `南昌大学家园工作室 — 前端负责人`"
+      "2015.3 - 2016.8 华科家园工作室 — 前端开发",
+      "2016.9 - 2017.6 `华科家园工作室 — 前端负责人`"
     ]
   },
   "language": {

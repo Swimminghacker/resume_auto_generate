@@ -1,6 +1,6 @@
 var generateInfoJson = require('./generateInfoJson');
-var gr = function(template_id,user_id,name,gender,birthday,city,position,tel,email,skill,hobby,edu,exp){
-        generateInfoJson(template_id,user_id,name,gender,birthday,city,position,tel,email,skill,hobby,edu,exp);
+var gr = function(user_id,date,name,sex,city,position,tel,email,skills,experience,language,education){
+        generateInfoJson(user_id,date,name,sex,city,position,tel,email,skills,experience,language,education);
         sass2css_resume();
         sass2css_iconfont();
         json2jade();
@@ -68,11 +68,6 @@ var json2jade = function(){
     .pipe(gulp.dest('./dist/'))
     .pipe(connect.reload());
     console.log('json has been changed to jade!');
-    // fs.unlink('info.json',function(err) {
-    //   if (err) throw err;
-    //   console.log('info.json删除成功');
-    // });
-    console.log('info.json has been deleted!')
 }
 
 function highlight(locals) {

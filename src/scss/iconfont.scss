@@ -61,6 +61,27 @@
   @include iconfont;
 }
 
+.icon-sex:before {
+  content: '\e901';
+  @include iconfont;
+  padding-left: 3px;
+}
+
+.icon-date:before {
+  content: '\e953';
+  @include iconfont;
+}
+
+.icon-city:before {
+  content: '\e9ca';
+  @include iconfont;
+}
+
+.icon-job:before {
+  content: '\e976';
+  @include iconfont;
+}
+
 .icon-mail:before {
   content: '\e602';
   @include iconfont;

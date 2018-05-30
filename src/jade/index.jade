@@ -3,26 +3,22 @@ extends layout
 block header
   header
     figure.qrcode
-      img(src='./img/wechat.jpg')
+      img(src='./img/std.jpg')
     section.title
       h1= header.title.name
       h2= header.title.job
     address
       ul.contacts
+        li.icon-sex
+          a= header.contacts.sex
+        li.icon-date
+          a= header.contacts.date
+        li.icon-city
+          a= header.contacts.city
         li.icon-phone.phone
           a= header.contacts.phone
         li.icon-mail
           a(href="mailto:"+header.contacts.mail)= header.contacts.mail
-        li.icon-wechat.wechat= header.contacts.wechat
-        li.icon-weibo
-          a(href=header.contacts.weibo.href)= header.contacts.weibo.name
-        if header.contacts.github
-          li.icon-github
-            a(href=header.contacts.github.href)= header.contacts.github.name
-        if header.contacts.blog
-          li.icon-blog
-            a(href=header.contacts.blog.href)= header.contacts.blog.name
-
 
 block education
   section.education

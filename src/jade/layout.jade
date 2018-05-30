@@ -8,12 +8,6 @@ html(lang='zh-cn')
     link(rel='stylesheet', type='text/css', href='./css/resume.css')
     link(rel='stylesheet', type='text/css', href='./iconfont/iconfont.css')
   body
-    if aside
-      aside
-        ul
-          each val in aside
-            li
-              a(href=val.href target="_blank")= val.content
     .container
       block header
       block content
@@ -24,12 +18,12 @@ html(lang='zh-cn')
           if language
             block language
           if experience
-            block experience
+            block skills
         article.column-6.column
-          block skills
+          block experience
     footer
       p
-        a(href='https://github.com/Lxxyx/LxxyxResume') LxxyxResume Generator 
+        a(href='javascript:void') ResumePdf Generator 
         | is inspired by 
-        a(href='javascript:void') Joyee Cheung
+        a(href='javascript:void') JianLiJun
         | . MIT License.
